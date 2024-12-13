@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Steps with Node.js (HTML)</title>
+</head>
+<body>
+  <h1 id="welcomeMessage"></h1>
+  <p id="dateTime"></p>
+
+  <script>
+    
+    const welcomeMessageElement = document.getElementById('welcomeMessage');
+    welcomeMessageElement.textContent = "Welcome to Node.js!";
+
+    const now = new Date();
+    const formattedDateTime = now.toISOString().split('T')[0] + ' ' + now.toTimeString().split(' ')[0];
+
+    const dateTimeElement = document.getElementById('dateTime');
+    dateTimeElement.textContent = `Current date and time: ${formattedDateTime}`;
+  </script>
+</body>
+</html>
